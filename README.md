@@ -70,7 +70,7 @@ The competition provided a dataset of real student summaries, which was used to 
 
 ## Results
 
-The models achieved competitive performance, resulting in bronze medals for the submissions.
+The models achieved competitive performance, resulting in a bronze medal for the submissions.
 
 ## Acknowledgments
 
