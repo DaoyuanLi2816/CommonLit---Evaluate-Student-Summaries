@@ -76,4 +76,10 @@ The models achieved competitive performance, resulting in bronze medals for the 
 
 Special thanks to CommonLit, The Learning Agency Lab, Vanderbilt University, Georgia State University, the Walton Family Foundation, and Schmidt Futures for their support.
 
+## Author
+
+Daoyuan Li - [Kaggle Profile](https://www.kaggle.com/distiller)
+
+I am a Competitions Expert on Kaggle, with multiple competition participations and several bronze medals.
+
 For more details about the competition, please visit the [Kaggle competition page](https://kaggle.com/competitions/commonlit-evaluate-student-summaries).
