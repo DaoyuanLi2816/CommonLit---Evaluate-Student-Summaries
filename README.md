@@ -2,6 +2,8 @@
 
 This repository contains the code and top-scoring notebook from my participation in the Kaggle competition "CommonLit - Evaluate Student Summaries". The goal of the competition was to assess the quality of summaries written by students in grades 3-12. Our models evaluate how well a student represents the main idea and details of a source text, as well as the clarity, precision, and fluency of the language used in the summary.
 
+![Intro](./212749168-86d6c7ab-98da-409b-998f-c5b74721badd.gif)
+
 ## Competition Overview
 
 - **Competition Host**: CommonLit, The Learning Agency Lab, Vanderbilt University, Georgia State University
