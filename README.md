@@ -209,3 +209,7 @@ Daoyuan Li - [Kaggle Profile](https://www.kaggle.com/distiller)
 I am a Competitions Expert on Kaggle, with multiple competition participations and several bronze medals.
 
 For more details about the competition, please visit the [Kaggle competition page](https://kaggle.com/competitions/commonlit-evaluate-student-summaries).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
