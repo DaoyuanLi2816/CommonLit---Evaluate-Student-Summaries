@@ -54,6 +54,8 @@ This repository contains the code and top-scoring notebook from my participation
 
 ### Preprocessing
 
+In the preprocessing stage, we defined a `Preprocessor` class to handle tasks such as text tokenization, spelling correction, and n-gram overlap calculations.
+
 ```python
 class Preprocessor:
     def __init__(self, model_name: str) -> None:
@@ -64,15 +66,21 @@ class Preprocessor:
         self.spacy_ner_model = spacy.load('en_core_web_sm')
         self.speller = Speller(lang='en')
         self.spellchecker = SpellChecker()
+```
+In the initialization method, we load the tokenizer for the specified model and necessary tools like stop words, NER model, and spelling correction tools.
 
+```python
     def word_overlap_count(self, row):
         prompt_words = row['prompt_tokens']
         summary_words = row['summary_tokens']
         if self.STOP_WORDS:
-            prompt_words = list(filter(lambda word: word in self.STOP_WORDS, prompt_words))
-            summary_words = list(filter(lambda word: word in self.STOP_WORDS, summary_words))
+            prompt_words = list(filter(lambda word: word in the STOP_WORDS, prompt_words))
+            summary_words = list(filter(lambda word: word in the STOP_WORDS, summary_words))
         return len(set(prompt_words).intersection(set(summary_words)))
+```
+This method calculates the word overlap between prompt and summary tokens by filtering out stop words and computing the intersection.
 
+```python
     def preprocess(self, input_df):
         input_df['summary_tokens'] = input_df['summary'].apply(self.tokenizer.tokenize)
         input_df['prompt_tokens'] = input_df['prompt'].apply(self.tokenizer.tokenize)
@@ -82,8 +90,11 @@ class Preprocessor:
         input_df['word_overlap_count'] = input_df.apply(self.word_overlap_count, axis=1)
         return input_df.drop(columns=["summary_tokens", "prompt_tokens"])
 ```
+The `preprocess` method tokenizes the input data, calculates lengths, length ratios, and word overlap counts, then drops the temporary token columns.
 
 ### Model Training and Evaluation
+
+In the model training and evaluation stage, we defined a `train_and_predict` function that performs model training, validation, and prediction.
 
 ```python
 def train_and_predict(train_df, test_df, target, save_each_model, model_name, hidden_dropout_prob, attention_probs_dropout_prob, max_length):
@@ -91,7 +102,10 @@ def train_and_predict(train_df, test_df, target, save_each_model, model_name, hi
     gkf = GroupKFold(n_splits=CFG.n_splits)
     for fold, (_, val_idx) in enumerate(gkf.split(train_df, groups=train_df["prompt_id"])):
         train_df.loc[val_idx, "fold"] = fold
-    
+```
+First, we use Group K-Fold cross-validation to split the dataset, ensuring that data from the same group does not appear in both training and validation sets simultaneously.
+
+```python
     for fold in range(CFG.n_splits):
         print(f"fold {fold}:")
         train_data = train_df[train_df.fold != fold]
@@ -116,7 +130,10 @@ def train_and_predict(train_df, test_df, target, save_each_model, model_name, hi
         tokenized_train = train_dataset.map(csr.preprocess_function, batched=True)
         valid_dataset = Dataset.from_pandas(valid_data)
         tokenized_valid = valid_dataset.map(csr.preprocess_function, batched=True)
-        
+```
+Next, for each fold, we create and configure a `ContentScoreRegressor` object, load the corresponding pre-trained model and configuration, and preprocess the training and validation datasets.
+
+```python
         training_args = TrainingArguments(
             output_dir=f"./results/{model_name}-{target}-fold-{fold}",
             evaluation_strategy="epoch",
@@ -150,8 +167,11 @@ def train_and_predict(train_df, test_df, target, save_each_model, model_name, hi
 
     return train_df
 ```
+We then configure training arguments and create a `Trainer` object to manage the training process. After training, we save the best model and predict on the validation set.
 
 ### Prediction and Ensembling
+
+In the prediction stage, we define a `predict` function to generate predictions for the test set.
 
 ```python
 def predict(test_df, target, save_each_model, model_name, hidden_dropout_prob, attention_probs_dropout_prob, max_length):
@@ -171,6 +191,8 @@ def predict(test_df, target, save_each_model, model_name, hidden_dropout_prob, a
     test_df[f"{target}_{model_name}"] = test_df[[f"{target}_{model_name}_{fold}" for fold in range(CFG.n_splits)]].mean(axis=1)
     return test_df
 ```
+This function loads the model for each fold, predicts on the test data, stores the predictions in the test dataframe, and averages the predictions across all folds to get the final result.
+
 
 ## Results
 
