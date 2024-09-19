@@ -206,7 +206,7 @@ Special thanks to CommonLit, The Learning Agency Lab, Vanderbilt University, Geo
 
 Daoyuan Li - [Kaggle Profile](https://www.kaggle.com/distiller)
 
-I am a Competitions Expert on Kaggle, with multiple competition participations and several bronze medals.
+I am a Competitions Expert on Kaggle, with multiple competition participations and several medals.
 
 For more details about the competition, please visit the [Kaggle competition page](https://kaggle.com/competitions/commonlit-evaluate-student-summaries).
 
