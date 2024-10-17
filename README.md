@@ -7,7 +7,7 @@ This repository contains the code and top-scoring notebook from my participation
 
 ## Competition Overview
 
-- **Competition Host**: CommonLit, The Learning Agency Lab, Vanderbilt University, Georgia State University
+- **Competition Host**: CommonLit, The Learning Agency Lab, Vanderbilt University, Georgia State University 
 - **Start Date**: July 12, 2023
 - **End Date**: October 11, 2023
 - **Evaluation Metric**: MCRMSE (Mean Columnwise Root Mean Squared Error)
