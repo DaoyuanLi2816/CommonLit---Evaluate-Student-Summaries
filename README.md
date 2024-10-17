@@ -54,6 +54,7 @@ row_id,normal_mild,moderate,severe
 123456_left_neural_foraminal_narrowing_l2_l3,0.333,0.333,0.333
 123456_left_neural_foraminal_narrowing_l3_l4,0.333,0.333,0.333
 ...
+```
 
 In rare cases where the lowest vertebrae are not visible in the image, you still need to make a prediction, as empty values will result in errors. However, these rows will not be scored.
 
