@@ -4,7 +4,7 @@ This solution was developed for the [RSNA 2024 Lumbar Spine Degenerative Classif
 
 Our team achieved a [Silver Medal](https://www.kaggle.com/certification/competitions/distiller/rsna-2024-lumbar-spine-degenerative-classification), with a public score of **0.43** and a private score of **0.49**. Our solution showcased the potential for using deep learning models, specifically YOLOv8, to classify lumbar spine conditions with high accuracy, contributing to the potential clinical utility of AI in radiological diagnostics. 🥈
 
-![Daoyuan Li - RSNA 2024 Lumbar Spine](./BreadcrumbsKaggle-RSNA-2024-Lumbar-Spine-Degenerative-Classification-Silver-Medal/Daoyuan%20Li%20-%20RSNA%202024%20Lumbar%20Spine%20Degenerative%20Classification.png)
+![Daoyuan Li - RSNA 2024 Lumbar Spine](./Daoyuan%20Li%20-%20RSNA%202024%20Lumbar%20Spine%20Degenerative%20Classification.png)
 
 ## Competition Overview
 
