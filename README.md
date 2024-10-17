@@ -1,5 +1,11 @@
 # RSNA 2024 Lumbar Spine Degenerative Classification Solution
 
+This solution was developed for the [RSNA 2024 Lumbar Spine Degenerative Classification](https://www.kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification/overview) competition on Kaggle, where participants were challenged to create models to detect and classify degenerative spine conditions based on lumbar spine MRI images. The task required building a model capable of predicting five different degenerative spine conditions and their severity levels across multiple disc levels. By simulating the diagnostic process of a radiologist, our model aims to enhance the accuracy and efficiency of lumbar spine assessments.
+
+Our team achieved a **Silver Medal**, placing **in the top 5%** of participants, with a public score of **0.43** and a private score of **0.49**. Our solution showcased the potential for using deep learning models, specifically YOLOv8, to classify lumbar spine conditions with high accuracy, contributing to the potential clinical utility of AI in radiological diagnostics. 🥈
+
+![Daoyuan Li - RSNA 2024 Lumbar Spine](./Daoyuan Li - RSNA 2024 Lumbar Spine Degenerative Classification.png)
+
 ## Competition Overview
 
 The goal of this competition is to develop models to assist in the detection and classification of degenerative spine diseases using lumbar spine MRI images. Participants will create models that simulate the radiologist’s diagnostic process for assessing spine conditions. 
