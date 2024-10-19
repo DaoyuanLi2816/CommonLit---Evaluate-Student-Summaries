@@ -155,3 +155,10 @@ Our team achieved a silver medal in the RSNA 2024 Lumbar Spine Degenerative Clas
 - RSNA 2024 Lumbar Spine Degenerative Classification competition silver medal
 - Public score: 0.43, Private score: 0.49, showcasing strong generalization capability
 - Solution holds potential clinical value for aiding radiologists in diagnostics
+
+
+## Author
+
+Daoyuan Li - [Kaggle Profile](https://www.kaggle.com/distiller)
+
+For any questions, please contact Daoyuan Li at lidaoyuan2816@gmail.com.
